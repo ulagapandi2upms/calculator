@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:gravity="center_vertical"
+    tools:orientation="vertical"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:background="@color/outputBgColor"
+    tools:parentTag="android.widget.LinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/calculator_formula"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:maxLines="2"
+        android:layout_gravity="end"
+        android:gravity="end|bottom"
+        android:text=""
+        android:scrollbars="none"
+        android:scrollHorizontally="true"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="24sp"
+        android:autoSizeMaxTextSize="32sp"
+        android:textColor="@color/colorTextLight"
+        android:padding="16dp"/>
+
+    <TextView
+        android:id="@+id/calculator_result"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
+        android:maxLines="2"
+        android:layout_gravity="end"
+        android:scrollHorizontally="true"
+        android:gravity="end|center_vertical"
+        android:text=""
+        android:textColor="@color/colorTextBold"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="32sp"
+        android:autoSizeMaxTextSize="48sp"
+        android:padding="16dp"/>
+
+</LinearLayout>

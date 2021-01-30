@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    tools:context=".MainActivity">
+
+   <com.kathir.calculator.calculator.CalculatorOutputView
+       android:id="@+id/output_layout"
+       android:layout_width="match_parent"
+       android:layout_height="250dp"
+       android:minHeight="250dp"
+       android:maxHeight="400dp"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       tools:ignore="MissingConstraints" />
+
+   <com.kathir.calculator.CalculatorInputView
+       android:id="@+id/key_delete"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:item_icon="@drawable/ic_delete"
+       app:layout_constraintTop_toBottomOf="@id/output_layout"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintBottom_toTopOf="@id/key_7"
+       app:layout_constraintEnd_toStartOf="@id/key_division"
+       tools:ignore="MissingConstraints" />
+
+   <com.kathir.calculator.CalculatorInputView
+       android:id="@+id/key_7"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:item_text="7"
+       app:layout_constraintTop_toBottomOf="@id/key_delete"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintBottom_toTopOf="@id/key_4"
+       app:layout_constraintEnd_toStartOf="@id/key_8"
+       tools:ignore="MissingConstraints" />
+
+   <com.kathir.calculator.CalculatorInputView
+       android:id="@+id/key_4"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:item_text="4"
+       app:layout_constraintTop_toBottomOf="@id/key_7"
+       app:layout_constraintBottom_toTopOf="@id/key_1"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toStartOf="@id/key_5"
+       tools:ignore="MissingConstraints" />
+
+   <com.kathir.calculator.CalculatorInputView
+       android:id="@+id/key_1"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:item_text="1"
+       app:layout_constraintTop_toBottomOf="@id/key_4"
+       app:layout_constraintBottom_toTopOf="@id/key_percentage"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toStartOf="@id/key_2"
+       tools:ignore="MissingConstraints" />
+
+   <com.kathir.calculator.CalculatorInputView
+       android:id="@+id/key_percentage"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:item_text="%"
+       app:layout_constraintTop_toBottomOf="@id/key_1"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toStartOf="@id/key_0"
+       tools:ignore="MissingConstraints" />
+
+   <com.kathir.calculator.CalculatorInputView
+       android:id="@+id/key_division"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:item_icon="@drawable/ic_division"
+       app:layout_constraintTop_toBottomOf="@id/output_layout"
+       app:layout_constraintStart_toEndOf="@id/key_delete"
+       app:layout_constraintBottom_toTopOf="@id/key_8"
+       app:layout_constraintEnd_toStartOf="@id/key_multiplication"
+       tools:ignore="MissingConstraints" />
+
+   <com.kathir.calculator.CalculatorInputView
+       android:id="@+id/key_8"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:item_text="8"
+       app:layout_constraintTop_toBottomOf="@id/key_delete"
+       app:layout_constraintStart_toEndOf="@id/key_7"
+       app:layout_constraintBottom_toTopOf="@id/key_5"
+       app:layout_constraintEnd_toStartOf="@id/key_9"
+       tools:ignore="MissingConstraints" />
+
+   <com.kathir.calculator.CalculatorInputView
+       android:id="@+id/key_5"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:item_text="5"
+       app:layout_constraintTop_toBottomOf="@id/key_8"
+       app:layout_constraintBottom_toTopOf="@id/key_2"
+       app:layout_constraintStart_toEndOf="@id/key_4"
+       app:layout_constraintEnd_toStartOf="@id/key_6"
+       tools:ignore="MissingConstraints" />
+
+   <com.kathir.calculator.CalculatorInputView
+       android:id="@+id/key_2"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:item_text="2"
+       app:layout_constraintTop_toBottomOf="@id/key_5"
+       app:layout_constraintBottom_toTopOf="@id/key_0"
+       app:layout_constraintStart_toEndOf="@id/key_1"
+       app:layout_constraintEnd_toStartOf="@id/key_3"
+       tools:ignore="MissingConstraints" />
+
+   <com.kathir.calculator.CalculatorInputView
+       android:id="@+id/key_0"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:item_text="0"
+       app:layout_constraintTop_toBottomOf="@id/key_2"
+       app:layout_constraintStart_toEndOf="@id/key_percentage"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toStartOf="@id/key_decimal"
+       tools:ignore="MissingConstraints" />
+
+   <com.kathir.calculator.CalculatorInputView
+       android:id="@+id/key_multiplication"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:item_icon="@drawable/ic_multiplication"
+       app:layout_constraintTop_toBottomOf="@id/output_layout"
+       app:layout_constraintStart_toEndOf="@id/key_division"
+       app:layout_constraintBottom_toTopOf="@id/key_9"
+       app:layout_constraintEnd_toStartOf="@id/key_backspace"
+       tools:ignore="MissingConstraints" />
+
+   <com.kathir.calculator.CalculatorInputView
+       android:id="@+id/key_9"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:item_text="9"
+       app:layout_constraintTop_toBottomOf="@id/key_multiplication"
+       app:layout_constraintStart_toEndOf="@id/key_8"
+       app:layout_constraintBottom_toTopOf="@id/key_6"
+       app:layout_constraintEnd_toStartOf="@id/key_minus"
+       tools:ignore="MissingConstraints" />
+
+   <com.kathir.calculator.CalculatorInputView
+       android:id="@+id/key_6"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:item_text="6"
+       app:layout_constraintTop_toBottomOf="@id/key_9"
+       app:layout_constraintBottom_toTopOf="@id/key_3"
+       app:layout_constraintStart_toEndOf="@id/key_5"
+       app:layout_constraintEnd_toStartOf="@id/key_plus"
+       tools:ignore="MissingConstraints" />
+
+   <com.kathir.calculator.CalculatorInputView
+       android:id="@+id/key_3"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:item_text="3"
+       app:layout_constraintTop_toBottomOf="@id/key_6"
+       app:layout_constraintBottom_toTopOf="@id/key_decimal"
+       app:layout_constraintStart_toEndOf="@id/key_2"
+       app:layout_constraintEnd_toStartOf="@id/key_equal"
+       tools:ignore="MissingConstraints" />
+
+   <com.kathir.calculator.CalculatorInputView
+       android:id="@+id/key_decimal"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:item_text="."
+       app:layout_constraintTop_toBottomOf="@id/key_3"
+       app:layout_constraintStart_toEndOf="@id/key_0"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toStartOf="@id/key_equal"
+       tools:ignore="MissingConstraints" />
+
+   <com.kathir.calculator.CalculatorInputView
+       android:id="@+id/key_backspace"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:item_icon="@drawable/ic_backspace"
+       app:layout_constraintTop_toBottomOf="@id/output_layout"
+       app:layout_constraintStart_toEndOf="@id/key_multiplication"
+       app:layout_constraintBottom_toTopOf="@id/key_minus"
+       app:layout_constraintEnd_toEndOf="parent"
+       tools:ignore="MissingConstraints" />
+
+   <com.kathir.calculator.CalculatorInputView
+       android:id="@+id/key_minus"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:item_icon="@drawable/ic_minus"
+       app:layout_constraintTop_toBottomOf="@id/key_backspace"
+       app:layout_constraintStart_toEndOf="@id/key_9"
+       app:layout_constraintBottom_toTopOf="@id/key_plus"
+       app:layout_constraintEnd_toEndOf="parent"
+       tools:ignore="MissingConstraints" />
+
+   <com.kathir.calculator.CalculatorInputView
+       android:id="@+id/key_plus"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:item_icon="@drawable/ic_plus"
+       app:layout_constraintTop_toBottomOf="@id/key_minus"
+       app:layout_constraintBottom_toTopOf="@id/key_3"
+       app:layout_constraintStart_toEndOf="@id/key_6"
+       app:layout_constraintEnd_toEndOf="parent"
+       tools:ignore="MissingConstraints" />
+
+   <com.kathir.calculator.CalculatorInputView
+       android:id="@+id/key_equal"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       app:item_icon="@drawable/ic_equal"
+       app:layout_constraintTop_toBottomOf="@id/key_plus"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toEndOf="@id/key_3"
+       app:layout_constraintEnd_toEndOf="parent"
+       tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

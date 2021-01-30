@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/inputBgColor"
+    tools:parentTag="android.widget.RelativeLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/input_element_View"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <View
+        android:id="@+id/input_element_click"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <ImageView
+        android:id="@+id/input_element_image"
+        android:layout_width="@dimen/sizeIcon"
+        android:layout_height="@dimen/sizeIcon"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_plus"
+        android:elevation="3dp"
+        app:tint="@color/colorImage"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/input_element_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_plus"
+        android:elevation="3dp"
+        android:textColor="@color/input_text_color"
+        android:textStyle="bold"
+        android:text="1"
+        android:textSize="@dimen/textSizeInputElement"
+        tools:ignore="MissingConstraints" />
+
+</merge>
