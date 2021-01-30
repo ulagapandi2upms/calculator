@@ -1,5 +1,6 @@
 package com.kathir.calculator
 
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -7,6 +8,7 @@ import com.kathir.calculator.calculator.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -37,6 +39,14 @@ class MainActivity : AppCompatActivity() {
         key_multiplication.setOnClickListener { output_layout.handleOperation(MULTIPLY) }
         key_division.setOnClickListener { output_layout.handleOperation(DIVIDE) }
         key_percentage.setOnClickListener { output_layout.handleOperation(PERCENT) }
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = resources.getColor(R.color.black)
+        }
     }
 
 }
